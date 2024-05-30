@@ -1,11 +1,8 @@
-import header from '../images/header.jpg';
-import 'animate.css';
-
 const Hero = () => {
   return (
     <div
       style={{
-        backgroundImage: `url('${header}')`,
+        backgroundImage: `url(images/header.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         color: "#e77822",
