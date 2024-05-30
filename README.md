@@ -1,2 +1,3 @@
 SipStation frontend
-![image](https://github.com/vvk130/sip-station-frontend/assets/80620628/9f397a90-2c2d-4945-a7e8-882cce2bb974)
+![image](https://github.com/vvk130/sip-station-frontend/assets/80620628/ce867250-b6bd-4ffb-9615-fea7792f6d34)
+
