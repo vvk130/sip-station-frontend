@@ -1,7 +1,8 @@
 const Hero = () => {
   return (
     <div
-      className="hero-container" style={{
+      className="hero-container"
+      style={{
         backgroundImage: `url(images/header.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -15,12 +16,24 @@ const Hero = () => {
         maxWidth: "100vw",
       }}
     >
-    <div style={{width: "100%"}}>
-    <div style={{padding: "1em", paddingLeft: "1em", paddingRight: "1em", textAlign: "left", textShadow: "0.1em 0.1em white"}}>
-      <span className='font-style-2' style={{fontSize: "4em"}}>Drink for every occasion</span>
-      <p style={{fontSize: "1.5em"}}>When life gives you lemons... make a limoncello!</p>
-    </div>
-    </div>
+      <div style={{ width: "100%" }}>
+        <div
+          style={{
+            padding: "1em",
+            paddingLeft: "1em",
+            paddingRight: "1em",
+            textAlign: "left",
+            textShadow: "0.1em 0.1em white",
+          }}
+        >
+          <span className="font-style-2" style={{ fontSize: "4em" }}>
+            Drink for every occasion
+          </span>
+          <p style={{ fontSize: "1.5em" }}>
+            When life gives you lemons... make a limoncello!
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

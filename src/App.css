@@ -1,33 +1,39 @@
-html, body {
-    padding: 0;
-    margin: 0;
-    font-family: "Hedvig Letters Sans", sans-serif;
-    /* width: 100%; */
-  }
-  
-  a {
-    color: white;
-    text-decoration: underline;
-    position: relative;
-    cursor: pointer;
-  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Hedvig Letters Sans", sans-serif;
+  /* width: 100%; */
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+  position: relative;
+  cursor: pointer;
+}
 
 a:hover {
-text-decoration: none;
-color: black;
+  text-decoration: none;
+  color: black;
 }
 
 button:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .card:hover {
-  background-image: linear-gradient(90deg, rgba(238,190,230,1) 0%, rgba(199,163,228,1) 35%, rgba(180,151,227,1) 100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(238, 190, 230, 1) 0%,
+    rgba(199, 163, 228, 1) 35%,
+    rgba(180, 151, 227, 1) 100%
+  );
 }
 
 .font-style-2 {
-    font-family: "Protest Guerrilla", sans-serif;
-    text-transform: uppercase;
+  font-family: "Protest Guerrilla", sans-serif;
+  text-transform: uppercase;
 }
 
 @media (max-width: 750px) {

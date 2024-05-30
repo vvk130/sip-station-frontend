@@ -1,6 +1,6 @@
-import Card from './Card';
-import { useState, useEffect } from 'react';
-import { Drink } from '../types';
+import Card from "./Card";
+import { useState, useEffect } from "react";
+import { Drink } from "../types";
 
 const CardGrid = () => {
   const [drinks, setDrink] = useState<Drink[]>([]);
@@ -8,14 +8,14 @@ const CardGrid = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/drinks/'); 
+        const response = await fetch("/api/drinks/");
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         const jsonData: Drink[] = await response.json();
         setDrink(jsonData);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -51,14 +51,25 @@ const CardGrid = () => {
         `}
       </style>
       <div className="grid-container">
-      {drinks.slice(0,16).map(drink => (
-        <span key={drink.id}>
-          <Card drink={drink} />
-        </span>
-      ))}
+        {drinks.slice(0, 16).map((drink) => (
+          <span key={drink.id}>
+            <Card drink={drink} />
+          </span>
+        ))}
       </div>
-      <div style={{padding: "2em"}}>
-      <button style={{fontVariant: "small-caps", borderRadius: "0em", color: "white", background: "black", padding: "1em", marginTop: "1rem"}}>LOAD MORE</button>
+      <div style={{ padding: "2em" }}>
+        <button
+          style={{
+            fontVariant: "small-caps",
+            borderRadius: "0em",
+            color: "white",
+            background: "black",
+            padding: "1em",
+            marginTop: "1rem",
+          }}
+        >
+          LOAD MORE
+        </button>
       </div>
     </>
   );
