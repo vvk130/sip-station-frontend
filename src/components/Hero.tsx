@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <div
-      style={{
+      className="hero-container" style={{
         backgroundImage: `url(images/header.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",

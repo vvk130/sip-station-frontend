@@ -22,11 +22,16 @@ button:hover {
 }
 
 .card:hover {
-    background-color: #8cd0e3;
+  background-image: linear-gradient(90deg, rgba(238,190,230,1) 0%, rgba(199,163,228,1) 35%, rgba(180,151,227,1) 100%);
 }
-
 
 .font-style-2 {
     font-family: "Protest Guerrilla", sans-serif;
     text-transform: uppercase;
+}
+
+@media (max-width: 750px) {
+  .hero-container {
+    display: none;
+  }
 }

@@ -12,7 +12,7 @@ function App() {
     <OfferBar/>
     <LinkBar />
     <Hero />
-    <p style={{fontSize:"2em"}}>Shop our products</p>
+    <p className="font-style-2" style={{fontSize:"3em", color: "#e77822", textShadow: "0.1em 0.1em black"}}>Shop our products</p>
     <CardGrid />
     <OfferBar/>
     <Footer />

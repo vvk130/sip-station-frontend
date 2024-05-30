@@ -29,13 +29,14 @@ const CardGrid = () => {
           .grid-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 1fr;
             grid-gap: 1em;
-            paddingTop: 2em;
-            paddingBottom: 2em;
+            padding: 2em;
             justify-content: space-evenly;
             justify-items: center;
             align-content: space-evenly;
             align-items: center;
+            align-items: top;
            
           }
           @media (max-width: 850px) {
@@ -43,10 +44,14 @@ const CardGrid = () => {
               grid-template-columns: repeat(2, 1fr);
             }
           }
+          @media (max-width: 600px) {
+            .grid-container {
+              grid-template-columns: repeat(1, 1fr);
+            }
         `}
       </style>
       <div className="grid-container">
-      {drinks.slice(0,10).map(drink => (
+      {drinks.slice(0,16).map(drink => (
         <span key={drink.id}>
           <Card drink={drink} />
         </span>
