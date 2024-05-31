@@ -5,6 +5,13 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ drink }) => {
+const imageUrl = drink.imgUrl ? `${drink.imgUrl}` : 'akcpsh1493070267.jpg';
+const fallbackImageUrl = 'images/akcpsh1493070267.jpg';
+// const handleImageError = (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
+//     event.currentTarget.src = 'akcpsh1493070267.jpg'; 
+//   };
+
+
   return (
     <div
       className="card"
@@ -29,7 +36,10 @@ const Card: React.FC<CardProps> = ({ drink }) => {
             borderTopLeftRadius: "0.5em",
             borderTopRightRadius: "0.5em",
           }}
-          src={`images/${drink.imgUrl}`}
+          src={`images/${imageUrl}`}
+          onError={(e) => {
+            e.currentTarget.src = fallbackImageUrl;
+          }}
           alt=""
         />
         <span style={{ padding: "1em" }}> {drink.name} ${drink.price}</span>
