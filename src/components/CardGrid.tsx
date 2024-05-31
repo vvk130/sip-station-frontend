@@ -4,23 +4,30 @@ import { Drink } from "../types";
 
 const CardGrid = () => {
   const [drinks, setDrink] = useState<Drink[]>([]);
+  const [pageNumber, setPageNumber] = useState<number>(0);
 
-  useEffect(() => {
-    const fetchData = async () => {
+    
+    const fetchData = async (pageNumber : number) => {
       try {
-        const response = await fetch("/api/drinks/");
+        const response = await fetch(`api/drinks?page=${pageNumber}`);
+        console.log(pageNumber);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const jsonData: Drink[] = await response.json();
-        setDrink(jsonData);
+        setDrink((prevDrinks) => [...prevDrinks, ...jsonData]);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    fetchData();
-  }, []);
+  useEffect(() => {
+      fetchData(pageNumber);
+  }, [pageNumber]);
+
+  const handleLoadMore = () => {
+    setPageNumber((prevPageNumber) => prevPageNumber + 1);
+  };
 
   return (
     <>
@@ -50,14 +57,15 @@ const CardGrid = () => {
         `}
       </style>
       <div className="grid-container">
-        {drinks.slice(0, 8).map((drink) => (
-          <span key={drink.id}>
+        {drinks.map((drink) => (
+          <span key={Math.random()}>
             <Card drink={drink} />
           </span>
         ))}
       </div>
       <div style={{ padding: "2em" }}>
         <button
+        onClick={handleLoadMore}
           style={{
             fontVariant: "small-caps",
             borderRadius: "0em",

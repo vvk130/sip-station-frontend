@@ -32,17 +32,7 @@ const Card: React.FC<CardProps> = ({ drink }) => {
           src={`images/${drink.imgUrl}`}
           alt=""
         />
-        <span style={{ padding: "1em" }}> {drink.name}</span>
-        <div
-          style={{
-            fontFamily: "serif",
-            fontStyle: "oblique",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <span>${drink.price}</span>
-        </div>
+        <span style={{ padding: "1em" }}> {drink.name} ${drink.price}</span>
         <div style={{ padding: "1em" }}>
           <button
             style={{
