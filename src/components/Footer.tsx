@@ -7,6 +7,7 @@ const Footer = () => {
         textAlign: "center",
         paddingTop: "1rem",
         paddingBottom: "1rem",
+        backgroundImage: `url(images/5183000.jpg)`,
       }}
     >
       <p>© 2024 SipStation. All rights reserved.</p>

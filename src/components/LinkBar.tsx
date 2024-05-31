@@ -7,7 +7,7 @@ const LinkBar = () => {
     <>
       <div
         style={{
-          backgroundColor: "#8cd0e3",
+          backgroundImage: `url(images/5183000.jpg)`,
           color: "white",
           textAlign: "center",
           paddingTop: "1rem",

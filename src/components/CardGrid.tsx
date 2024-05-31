@@ -50,7 +50,7 @@ const CardGrid = () => {
         `}
       </style>
       <div className="grid-container">
-        {drinks.slice(0, 16).map((drink) => (
+        {drinks.slice(0, 8).map((drink) => (
           <span key={drink.id}>
             <Card drink={drink} />
           </span>

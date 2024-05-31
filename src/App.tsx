@@ -37,6 +37,8 @@ function App() {
       <OfferBar />
       <LinkBar />
       <Hero />
+
+      <div style={{padding: "4em", paddingTop: "1em"}}>
       <p
         className="font-style-2"
         style={{
@@ -45,9 +47,8 @@ function App() {
           textShadow: "0.1em 0.1em black",
         }}
       >
-        Shop our products sdfkdfosfko
+        Shop our products
       </p>
-      <div style={{paddingTop: "3em", paddingBottom: "3em"}}>
       <RouterProvider router={router} />
       </div>
       <Footer />
