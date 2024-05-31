@@ -37,7 +37,6 @@ const CardGrid = () => {
             align-content: space-evenly;
             align-items: center;
             align-items: top;
-           
           }
           @media (max-width: 850px) {
             .grid-container {

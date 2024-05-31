@@ -21,11 +21,19 @@ const router = createBrowserRouter([
     path: "*",
     element: <div>Not found</div>,
   },
+  {
+    path: "profile",
+    element: <div>Profile</div>,
+  },
+  {
+    path: "searh",
+    element: <div>Search results</div>,
+  },
 ]);
 
 function App() {
   return (
-    <div style={{ width: "100%", textAlign: "center" }}>
+    <div style={{textAlign: "center", display: "flex", flexDirection: "column", maxWidth: "100vw", height: "100vh", margin: "0 auto"}}>
       <OfferBar />
       <LinkBar />
       <Hero />
@@ -37,10 +45,11 @@ function App() {
           textShadow: "0.1em 0.1em black",
         }}
       >
-        Shop our products
+        Shop our products sdfkdfosfko
       </p>
+      <div style={{paddingTop: "3em", paddingBottom: "3em"}}>
       <RouterProvider router={router} />
-      <OfferBar />
+      </div>
       <Footer />
     </div>
   );

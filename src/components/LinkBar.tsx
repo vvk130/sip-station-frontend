@@ -1,7 +1,6 @@
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { useState } from "react";
 
 const LinkBar = () => {
   return (
@@ -30,14 +29,14 @@ const LinkBar = () => {
           }}
         >
           <a href="/">HOME</a>
-          <a href="/">
+          <a href="/search">
             <SearchIcon />
           </a>
-          <a href="/">
+          <a href="/profile">
             {" "}
             <PersonIcon />
           </a>{" "}
-          <a href="/">
+          <a href="/cart">
             <ShoppingCartIcon />
           </a>
         </div>
