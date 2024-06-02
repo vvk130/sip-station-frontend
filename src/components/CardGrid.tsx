@@ -35,32 +35,22 @@ const CardGrid = () => {
         {`
           .grid-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: 1fr;
-            grid-gap: 1em;
-            padding: 2em;
-            justify-content: space-evenly;
-            justify-items: center;
-            align-content: space-evenly;
-            align-items: center;
-            align-items: top;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 1rem;
           }
-          @media (max-width: 850px) {
-            .grid-container {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-          @media (max-width: 600px) {
-            .grid-container {
-              grid-template-columns: repeat(1, 1fr);
-            }
         `}
       </style>
       <div className="grid-container">
         {drinks.map((drink) => (
-          <span key={Math.random()}>
+          <div className="card" key={Math.random()} style={{display: "flex",       
+            borderRadius: "0.5em",
+            width: "100%",
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column"}}>
             <Card drink={drink} />
-          </span>
+          </div>
         ))}
       </div>
       <div style={{ padding: "2em" }}>

@@ -1,4 +1,7 @@
+import { alignProperty } from "@mui/material/styles/cssUtils";
 import { Drink } from "../types";
+import { Flex } from "antd";
+import { Directions } from "@mui/icons-material";
 
 interface CardProps {
   drink: Drink;
@@ -7,34 +10,16 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ drink }) => {
 const imageUrl = drink.imgUrl ? `${drink.imgUrl}` : 'akcpsh1493070267.jpg';
 const fallbackImageUrl = 'images/akcpsh1493070267.jpg';
-// const handleImageError = (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
-//     event.currentTarget.src = 'akcpsh1493070267.jpg'; 
-//   };
-
+// {/* display: "flex", justifyContent: "flex-start", flexDirection: "column", alignContent: "start", alignItems: "flex-start" */}
 
   return (
-    <div
-      className="card"
-      style={{
-        borderRadius: "0.5em",
-        height: "100%",
-        width: "100%",
-        boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-        }}
-      >
-        <img
+    <div style={{}} >
+       <img
           style={{
             maxWidth: "100%",
             borderTopLeftRadius: "0.5em",
             borderTopRightRadius: "0.5em",
+            marginTop: "0em",
           }}
           src={`images/${imageUrl}`}
           onError={(e) => {
@@ -42,8 +27,9 @@ const fallbackImageUrl = 'images/akcpsh1493070267.jpg';
           }}
           alt=""
         />
-        <span style={{ padding: "1em" }}> {drink.name} ${drink.price}</span>
-        <div style={{ padding: "1em" }}>
+        <p style={{ padding: "1em" }}> {drink.name}</p>
+        <p>{drink.price}€</p>
+        {/* <div style={{ padding: "1em" }}> */}
           <button
             style={{
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
@@ -54,13 +40,13 @@ const fallbackImageUrl = 'images/akcpsh1493070267.jpg';
               padding: "1em",
               marginTop: "1rem",
               alignContent: "center",
+              marginBottom: "1em",
             }}
           >
             ADD TO CART
           </button>
-        </div>
+        {/* </div> */}
       </div>
-    </div>
   );
 };
 
