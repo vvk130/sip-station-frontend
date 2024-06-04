@@ -13,13 +13,16 @@ const fallbackImageUrl = 'images/akcpsh1493070267.jpg';
 // {/* display: "flex", justifyContent: "flex-start", flexDirection: "column", alignContent: "start", alignItems: "flex-start" */}
 
   return (
-    <div style={{}} >
+    <div>
+        <div style={{maxWidth: "100%", maxHeight: "20vh", position: "relative", overflow: "hidden"}}> 
        <img
           style={{
             maxWidth: "100%",
+            height: "auto",
             borderTopLeftRadius: "0.5em",
             borderTopRightRadius: "0.5em",
             marginTop: "0em",
+            objectFit: "cover",
           }}
           src={`images/${imageUrl}`}
           onError={(e) => {
@@ -27,6 +30,7 @@ const fallbackImageUrl = 'images/akcpsh1493070267.jpg';
           }}
           alt=""
         />
+        </div>
         <p style={{ padding: "1em" }}> {drink.name}</p>
         <p>{drink.price}€</p>
         {/* <div style={{ padding: "1em" }}> */}
